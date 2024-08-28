@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-arg">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,32 +10,35 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <title>encriptador de texto</title>
+    <title>Encriptador de Texto</title>
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="/img/Alura logo.png" alt="logo de alura">
+    <header class="header">
+        <img class="logo" src="./img/Alura logo.png" alt="logo de alura">
+        <h1>Encriptador de Texto</h1>
     </header>
+
     <main class="main">
-        <section>
-            <textarea class="texto__area" cols="30" raws="10" placeholder="Ingese el texto aqui"></textarea>
-            <div>
-                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
-            </div>
+        <section class="input-section">
+            <h2>Ingrese el texto a encriptar o desencriptar</h2>
+            <textarea class="texto__area" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="informacion">Solo letras minúsculas y sin acentos</p>
             <div class="botones">
                 <button class="boton__encriptar" onclick="botonEncriptar()">Encriptar</button>
                 <button class="boton__desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section>
-            <textarea class="mensaje__encriptado" id="textoParaCopiar" cols="30" raws="10"></textarea>
-            <div>
-                <button class="copiar" onclick="copiarTexto()">Copiar</button>
-            </div>
+
+        <section class="output-section">
+            <h2>Resultado</h2>
+            <textarea class="mensaje__encriptado" id="textoParaCopiar" placeholder="El mensaje aparecerá aquí"
+                readonly></textarea>
+            <button class="copiar" onclick="copiarTexto()">Copiar</button>
         </section>
     </main>
-    <script src="/script.js">  </script>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>
